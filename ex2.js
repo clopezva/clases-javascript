@@ -8,15 +8,23 @@ class Coche {
      * @param {number} deposito Indica cuan lleno está el depósito. 100 indica que está completamente lleno, 0 que esta vacío.
      */
     constructor(modelo, matricula, gps) {
-
+        this.modelo = modelo
+        this.matricula = matricula
+        this.gps = gps
+        this.deposito = 100
     }
 
     // Llena el deposito a 100 unidades de gasolina
     llenarDeposito() {
+        this.deposito = 100
     }
 
     // Consume una unidad del deposito
     usar() {
+        this.deposito = this.deposito - 1
+    }
+    estaDepositoVacio(){
+       this.deposito === 0 ? true : false
     }
 
 }
