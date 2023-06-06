@@ -7,12 +7,12 @@ class Product {
     }
 
     toString() {
-        return this.price // INCOMPLETO
+        return this.price = `The price of the ${this.name} is ${this.price}€` // INCOMPLETO
     }
 }
 
-const cafe = new Product('café Bonka', 5)
+const cafe = new Product('Café Bonka', 5)
 console.log(cafe.toString())
-const bollo = new Product('bolleria industrial', 3)
+const bollo = new Product('Bolleria industrial', 3)
 console.log(bollo.toString())
 
