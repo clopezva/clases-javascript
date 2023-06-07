@@ -9,18 +9,47 @@
 // Implementa el método 'join'. El método 'join' devuelve un string, con todos los elementos del array concatenadors por un separados, que debes pasar como argumento
 
 class Array {
+    constructor(){
+        this.array = []
+    }
+    addNew (element){
+        this.array.push(element)
+    }
 
-}
+    findIndex(element){ // Cuki
+        for (let i = 0; i <= this.array.length - 1; i++){
+            if (element === this.array[i]){
+                return i
+            }
+            }
+            return -1
+        }
+        //let indexOfElement;
+
+        // this.array.forEach((e, index) => {
+        //     if (e === element){
+        //         indexOfElement = index
+        //     }else{
+        //         indexOfElement = -1
+        //     }
+            
+        // })
+        // return indexOfElement
+    }
+
 
 // PRUEBAS
 const gatos = new Array()
-//gatos.addNew('Michi')
-//gatos.addNew('Cuki')
-//gatos.addNew('Loki')
+gatos.addNew('Michi')
+gatos.addNew('Cuki')
+gatos.addNew('Loki')
+
+console.log(gatos)
 
 
 // Debe devolver un 1
-// console.log(gatos.findIndex('Cuki'))
+console.log(gatos.findIndex('Cuki'))
+
 
 // Debe devolver 'Michi-Cuki-Loki'
 // console.log(gatos.join('-'))
