@@ -49,14 +49,21 @@ class DNI {
 
     // Dado un número de DNI, nos calcula la letra. Buscar por Internet como calcular la letra de un DNI
     calculaLetraDni(dni) {
-       // Dividir el número completo de nuestro DNI entre 23 sin sacar decimales, redondeando el resultado.  
-       
-       
-
+        
+        // La letra corresponderá al valor obtenido de la operación, de acuerdo con la ubicación dentro del código: TRWAGMYFPDXBNJZSQVHLCKE que cuenta con 23 caracteres.
+        const letters = 'TRWAGMYFPDXBNJZSQVHLCKE'
+        // El resto de la división es el que se utiliza para calcular la letra.
+        // El número completo del DNI se debe dividir entre 23.
+        const rest = dni % 23
+        console.log(letters, rest)
+        // How can I look for a letter in a string given the index?
+        // Use charAt() to get a character at the specified index in the string.
+        const dniLetter = letters.charAt(rest)
+        console.log(dniLetter)
     }
 }
 
 const midni = new DNI("Pedro Vallés", "70973021N", "2025-10-10");
 console.log(midni.estaCaducado());
 console.log(midni.esDniFormatoValido());
-midni.calculaLetraDni('70973021N')
+midni.calculaLetraDni('70973021')
